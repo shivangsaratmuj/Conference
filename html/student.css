@@ -1,0 +1,55 @@
+.student {
+	float: left;
+	width: 40%;
+	padding: 20px;
+	background-color: #b7aeae;
+	font-size: 20px;
+	height: 150px;
+}
+
+.details {
+	float: right;
+	width: 40%;
+	padding: 20px;
+	background-color: #b4b5c4;
+	font-size: 20px;
+	height: 150px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.request {
+	padding: 20px;
+	border: 2px solid black;
+}
+
+input[type=text], input[type=date], [type=time] {
+	width: 100%;
+  	padding: 12px 20px;
+  	margin: 8px 0;
+  	box-sizing: border-box;
+  	border: 3px solid #ccc;
+  	-webkit-transition: 0.5s;
+  	transition: 0.5s;
+  	outline: none;
+}
+
+
+input[type=text]:focus, input[type=date]:focus, [type=time]:focus {
+	border: 3px solid #555;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+table {
+	width: 100%;
+}
+th {
+	background-color: #ccc;
+}

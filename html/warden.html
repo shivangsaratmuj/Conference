@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Warden Panel - MUJ Outpass</title>
+	<link rel="stylesheet" type="text/css" href="warden.css">
+	<script type="text/javascript">
+		function alertfun() {
+			// body...
+			var x = document.getElementById('resp');
+			if (x.style.display === "none") {
+			    x.style.display = "block";
+			} else {
+			    x.style.display = "none";
+			}
+		}
+		function forward() {
+			// body...
+			document.getElementById('status').innerHTML = "Approved";
+			document.getElementById('btn').innerHTML = "";
+			document.getElementById('resp').innerHTML = "";
+		}
+		function reject() {
+			// body...
+			document.getElementById('status').innerHTML = "Rejected";
+			document.getElementById('btn').innerHTML = "";
+			document.getElementById('resp').innerHTML = "";
+		}
+	</script>
+</head>
+<body>
+	<div class="row">
+		<div class="student">
+			<b>Name:</b> Shivang Sarat<br>
+			<b>Email:</b> shivangsarat@gmail.com<br>
+			<b>Contact:</b> 9460525915
+		</div>
+		<div class="details">
+			<b>Designation:</b> Warden<br>
+			<b>Department:</b> Computer Science Engineering<br>
+		</div>
+	</div><br>
+	<div id="resp" style="display: none">
+		<button onclick = 'forward()'>Approve</button><br>
+		<button onclick = 'reject()'>Deny</button>
+	</div>
+	<div class="status">
+		<table>
+			<tr>
+				<th>Date of Request</th>
+				<th>Student Name</th>
+			    <th>Date of Departure</th> 
+			    <th>Date of Return</th>
+			    <th>Reason for Leaving</th>
+			    <th>Guardian's Name</th>
+				<th>Guardian's Relationship</th>
+				<th>Guardian's Contact</th>
+				<th>Guardian's Email:</th>
+			    <th>Status</th>
+			    <th>Respond</th>
+			</tr>
+			<tr>
+			    <td>24/02/2019</td>
+			    <td>Shivang Sarat</td>
+			    <td>10/03/2019</td> 
+			    <td>11/03/2019</td>
+			    <td>Wedding at Relatives</td>
+			    <td>Sudin Kumar</td>
+			    <td>Father</td>
+			    <td>9460525915</td>
+			    <td>sudin.kumar@sbi.co.in</td>
+			    <td>Approved</td>
+			    <td></td>
+			</tr>
+			<tr>
+			    <td>25/02/2019</td>
+			    <td>Shivang Sarat</td>
+			    <td>20/03/2019</td> 
+			    <td>25/03/2019</td>
+			    <td>Holi</td>
+			    <td>Sudin Kumar</td>
+			    <td>Father</td>
+			    <td>9460525915</td>
+			    <td>sudin.kumar@sbi.co.in</td>
+			    <td id="status">Waiting</td>
+			    <td id="btn"><button onclick="alertfun()">Respond</button></td>
+			</tr>
+			<tr>
+			    <td>22/02/2019</td>
+			    <td>Shivang Sarat</td>
+			    <td>23/02/2019</td> 
+			    <td>25/02/2019</td>
+			    <td>Night out</td>
+			    <td>Sudin Kumar</td>
+			    <td>Father</td>
+			    <td>9460525915</td>
+			    <td>sudin.kumar@sbi.co.in</td>
+			    <td>Denied</td>
+			    <td></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
